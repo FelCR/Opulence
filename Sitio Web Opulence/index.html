@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opulence - Home</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="assets/logo-opulence.png" alt="Opulence" />
+      </a>
+
+      <button class="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
+        <a href="tienda.html" class="nav__link">Productos</a>
+        <a href="negocio.html" class="nav__link">Negocio</a>
+        <a href="contacto.html" class="nav__link">Contacto</a>
+        <a href="admin.html" class="nav__link">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__left">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            ELEVA TU<br>
+            BIENESTAR.<br>
+            EXPANDE TU<br>
+            POTENCIAL.
+          </h1>
+
+          <p class="hero__subtitle">
+            Tu cuerpo es tu activo más<br>
+            importante.
+          </p>
+
+          <a class="btn-outline" href="#contacto">
+            ENVIANOS UN<br>MENSAJE
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <img
+          class="hero__image"
+          src="assets/hero.jpg"
+          alt="Mujer sonriendo"
+        />
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="about" id="nosotros">
+      <div class="about__inner">
+        <h2 class="about__heading">NOSOTROS</h2>
+
+        <div class="about__grid">
+          <div class="about__media">
+            <img src="assets/nosotros.jpg" alt="Equipo Opulence" />
+          </div>
+
+          <div class="about__text">
+            <h3>
+              En Opulence México creemos que invertir<br />
+              en tu cuerpo es invertir en tu futuro.
+            </h3>
+
+            <p>
+              Somos la representación en México de Opulence Global, una empresa canadiense
+              con presencia internacional, dedicada a crear productos premium que elevan la
+              salud, la apariencia y la calidad de vida de las personas.
+            </p>
+
+            <a class="about__link" href="nosotros.html">Saber más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTO DESTACADO (fondo + overlay + frasco derecha) -->
+    <section class="featured-product" id="productos">
+      <div class="featured-product__overlay"></div>
+
+      <div class="featured-product__content">
+        <div class="featured-product__text">
+          <span class="featured-product__eyebrow">Conoce</span>
+
+          <h2 class="featured-product__title">
+            Fountain of Life
+          </h2>
+
+          <p class="featured-product__subtitle">
+            El antioxidante más poderoso del mercado
+          </p>
+
+          <a href="#" class="btn-outline btn-outline--light">
+            COMPRA AHORA
+          </a>
+        </div>
+
+        <div class="featured-product__image">
+          <img
+            src="assets/fountain-of-life.png"
+            alt="Fountain of Life"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIONES -->
+    <section class="solutions">
+      <div class="solutions__inner">
+        <div class="solutions__grid">
+
+          <!-- Columna izquierda -->
+          <div class="solutions__left">
+            <h2 class="solutions__title">
+              OFRECEMOS<br />
+              SOLUCIONES DE<br />
+              BIENESTAR DE CLASE<br />
+              MUNDIAL
+            </h2>
+
+            <p class="solutions__copy">
+              Hoy, Opulence llega a México con su producto insignia:
+              <strong>Fountain of Life</strong>, un suplemento antioxidante excepcional que ha impactado
+              positivamente la vida de miles de personas en todo el mundo.
+            </p>
+
+            <a href="#contacto" class="btn-outline solutions__btn">CONTACTÁNOS</a>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="solutions__right">
+            <div class="solutions__photo">
+              <img src="assets/solutions-model.jpg" alt="Bienestar Opulence" />
+            </div>
+
+            <div class="solutions__product">
+              <img class="solutions__product-bottle" src="assets/fountain-bottle.png" alt="Fountain of Life" />
+              <img class="solutions__product-leaves" src="assets/leaves.png" alt="" aria-hidden="true" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY OPULENCE -->
+    <section class="why">
+      <div class="why__inner">
+        <div class="why__grid">
+
+          <div class="why__left">
+            <h2 class="why__title">¿POR QUÉ OPULENCE<br>MX?</h2>
+
+            <p class="why__copy">
+              Opulence México representa una nueva forma de entender el bienestar: una que combina ciencia,
+              elegancia y oportunidad, respaldada por una marca global con trayectoria comprobada.
+            </p>
+          </div>
+
+          <div class="why__right">
+            <div class="why__frame">
+              <img src="assets/why-model.jpg" alt="Opulence MX" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 COLUMNAS -->
+    <section class="triptych">
+      <div class="triptych__inner">
+        <div class="triptych__grid">
+
+          <article class="triptych__card">
+            <div class="triptych__oval">
+              <img src="assets/trip-1.jpg" alt="Bienestar es inversión" />
+            </div>
+
+            <h3 class="triptych__title">
+              El bienestar es una inversión, no un gasto
+            </h3>
+
+            <p class="triptych__text">
+              Opulence México nace para acompañar a quienes entienden que sentirse bien por dentro se refleja por fuera
+            </p>
+
+            <a class="triptych__btn" href="#">MAS INFORMACION</a>
+          </article>
+
+          <article class="triptych__card">
+            <div class="triptych__oval">
+              <img src="assets/trip-2.jpg" alt="Productos premium" />
+            </div>
+
+            <h3 class="triptych__title">
+              Productos premium y respaldo internacional
+            </h3>
+
+            <p class="triptych__text">
+              empresa de origen canadiense con más de dos décadas de experiencia y presencia internacional.
+            </p>
+
+            <a class="triptych__btn" href="#">MAS INFORMACION</a>
+          </article>
+
+          <article class="triptych__card">
+            <div class="triptych__oval">
+              <img src="assets/trip-3.jpg" alt="Visión de crecimiento" />
+            </div>
+
+            <h3 class="triptych__title">
+              Unimos bienestar con visión de crecimiento
+            </h3>
+
+            <p class="triptych__text">
+              Además de productos que transforman la salud, también ayudamos a quienes desean construir algo propio
+            </p>
+
+            <a class="triptych__btn" href="negocio.html">MAS INFORMACION</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="contact__grid">
+
+        <!-- Left -->
+        <div class="contact__left">
+          <div class="contact__inner">
+            <h2 class="contact__title">CONTÁCTANOS<br>HOY</h2>
+
+            <div class="contact__block">
+              <p><strong>Celular:</strong> +57 123 456 7890</p>
+              <p><strong>Correo:</strong> hola@sitioincreible.com</p>
+              <p><strong>Redes sociales:</strong> @sitioincreible.com</p>
+            </div>
+
+            <div class="contact__block contact__block--spaced">
+              <p class="contact__subtitle"><strong>Oficina principal</strong></p>
+              <p>Calle 12, # 3 - 45.</p>
+              <p>Cartagena, Colombia</p>
+            </div>
+
+            <p class="contact__note">Esta oficina tiene acceso para sillas de ruedas.</p>
+
+            <div class="contact__cta">
+              <a class="contact__btn" href="#">RESERVA UNA CONSULTA</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right -->
+        <div class="contact__right">
+          <img src="assets/contact-photo.jpg" alt="Equipo Opulence" />
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div class="footer__grid">
+
+      <!-- Columna 1: Marca -->
+      <div>
+        <img class="footer__brand-logo" src="assets/logo-opulence.png" alt="Opulence" />
+        <p class="footer__brand-tagline">
+          Elevando el bienestar y el potencial de las personas con productos premium de clase mundial.
+        </p>
+        <div class="footer__social">
+          <a class="footer__social-link" href="#" aria-label="Instagram" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#" aria-label="Facebook" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#" aria-label="WhatsApp" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+          <a class="footer__social-link" href="#" aria-label="TikTok" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div>
+        <h4 class="footer__col-title">Navegación</h4>
+        <ul class="footer__nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="negocio.html">Negocio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Productos -->
+      <div>
+        <h4 class="footer__col-title">Productos</h4>
+        <ul class="footer__nav">
+          <li><a href="tienda.html">Fountain of Life</a></li>
+          <li><a href="tienda.html">Collagen Boost</a></li>
+          <li><a href="tienda.html">Immunity Shield</a></li>
+          <li><a href="tienda.html">Energy Formula</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Contacto -->
+      <div>
+        <h4 class="footer__col-title">Contacto</h4>
+
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📍</span>
+          <p>Ciudad de México, México</p>
+        </div>
+
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">📞</span>
+          <p><a href="tel:+525512345678">+52 55 1234 5678</a></p>
+        </div>
+
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">✉️</span>
+          <p><a href="mailto:hola@opulencemexico.com">hola@opulencemexico.com</a></p>
+        </div>
+
+        <div class="footer__contact-item">
+          <span class="footer__contact-icon">🕐</span>
+          <p>Lun – Vie: 9:00 – 18:00 hrs</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Barra inferior -->
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Opulence México. Todos los derechos reservados.</p>
+      <div class="footer__bottom-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="admin.html">Admin</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

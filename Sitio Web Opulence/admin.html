@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin | Opulence</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="admin-login" id="adminLogin">
+  <div class="login-card">
+    <div class="login-logo">
+      <span class="login-brand">OPULENCE</span>
+      <span class="login-sub">Panel Administrativo</span>
+    </div>
+    <form class="login-form" id="loginForm" novalidate>
+      <div class="login-field">
+        <label for="loginUser">Usuario</label>
+        <input id="loginUser" type="text" placeholder="admin" autocomplete="username" />
+      </div>
+      <div class="login-field">
+        <label for="loginPass">Contraseña</label>
+        <input id="loginPass" type="password" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <p class="login-error" id="loginError" style="display:none;">Usuario o contraseña incorrectos.</p>
+      <button class="login-btn" type="submit">INGRESAR</button>
+    </form>
+    <p class="login-hint">usuario: <code>admin</code> &nbsp;|&nbsp; contraseña: <code>opulence2024</code></p>
+  </div>
+</div>
+
+<div class="admin-layout" id="adminLayout" style="display:none;">
+
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <span>OPULENCE</span>
+      <small>Admin</small>
+    </div>
+    <nav class="admin-nav">
+      <a href="#" class="admin-nav__link is-active" data-section="dashboard">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="admin-nav__link" data-section="products">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        Productos
+      </a>
+      <a href="#" class="admin-nav__link" data-section="orders">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+        Pedidos
+      </a>
+      <a href="#" class="admin-nav__link" data-section="messages">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Mensajes
+      </a>
+    </nav>
+    <div class="admin-sidebar__footer">
+      <a href="index.html" class="sidebar-link-out" target="_blank">← Ver sitio</a>
+      <button class="logout-btn" id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <div class="admin-topbar">
+      <h1 class="admin-page-title" id="pageTitle">Dashboard</h1>
+      <div class="admin-topbar__right">
+        <span class="admin-user">admin</span>
+      </div>
+    </div>
+
+    <section class="admin-section" id="section-dashboard">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--dark">📦</div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Productos</span>
+            <strong class="stat-card__value" id="statProducts">0</strong>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--green">🛒</div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Pedidos</span>
+            <strong class="stat-card__value" id="statOrders">0</strong>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--blue">💰</div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Ingresos</span>
+            <strong class="stat-card__value" id="statRevenue">$0</strong>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--purple">✉️</div>
+          <div class="stat-card__body">
+            <span class="stat-card__label">Mensajes</span>
+            <strong class="stat-card__value" id="statMessages">0</strong>
+          </div>
+        </div>
+      </div>
+      <div class="admin-card" style="margin-top:30px;">
+        <div class="admin-card__head">
+          <h2>Últimos pedidos</h2>
+          <button class="btn-link" onclick="showSection('orders')">Ver todos →</button>
+        </div>
+        <div id="recentOrders"></div>
+      </div>
+      <div class="admin-card" style="margin-top:20px;">
+        <div class="admin-card__head">
+          <h2>Mensajes recientes</h2>
+          <button class="btn-link" onclick="showSection('messages')">Ver todos →</button>
+        </div>
+        <div id="recentMessages"></div>
+      </div>
+    </section>
+
+    <section class="admin-section" id="section-products" style="display:none;">
+      <div class="section-actions">
+        <button class="btn-primary" id="newProductBtn">+ Nuevo producto</button>
+      </div>
+      <div class="admin-card">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Imagen</th><th>Nombre</th><th>Categoría</th>
+              <th>Precio</th><th>Stock</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="productsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section" id="section-orders" style="display:none;">
+      <div class="admin-card">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th><th>Fecha</th><th>Cliente</th>
+              <th>Total</th><th>Pago</th><th>Estado</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+        <p class="empty-state" id="ordersEmpty" style="display:none;">Aún no hay pedidos registrados.</p>
+      </div>
+    </section>
+
+    <section class="admin-section" id="section-messages" style="display:none;">
+      <div class="admin-card">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Fecha</th><th>Nombre</th><th>Correo</th>
+              <th>Asunto</th><th>Mensaje</th><th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="messagesBody"></tbody>
+        </table>
+        <p class="empty-state" id="messagesEmpty" style="display:none;">No hay mensajes todavía.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Modal producto -->
+<div class="modal-overlay" id="productModal" style="display:none;">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="modalTitle">Nuevo producto</h2>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <form class="modal-form" id="productForm" novalidate>
+      <input type="hidden" id="pId" name="id" />
+      <div class="modal-row">
+        <div class="modal-field">
+          <label for="pName">Nombre *</label>
+          <input id="pName" name="name" type="text" placeholder="Nombre del producto" required />
+        </div>
+        <div class="modal-field">
+          <label for="pCategory">Categoría</label>
+          <select id="pCategory" name="category">
+            <option>Antioxidantes</option><option>Colágeno</option>
+            <option>Inmunidad</option><option>Energía</option><option>Otro</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-row">
+        <div class="modal-field">
+          <label for="pPrice">Precio (MXN) *</label>
+          <input id="pPrice" name="price" type="number" min="0" placeholder="0" required />
+        </div>
+        <div class="modal-field">
+          <label for="pStock">Stock</label>
+          <input id="pStock" name="stock" type="number" min="0" placeholder="0" />
+        </div>
+      </div>
+      <div class="modal-field">
+        <label for="pImage">URL de imagen</label>
+        <input id="pImage" name="image" type="text" placeholder="assets/mi-producto.png" />
+      </div>
+      <div class="modal-field">
+        <label for="pDesc">Descripción</label>
+        <textarea id="pDesc" name="description" rows="4" placeholder="Describe el producto..."></textarea>
+      </div>
+      <div class="modal-field modal-field--check">
+        <label>
+          <input id="pFeatured" name="featured" type="checkbox" />
+          Producto destacado
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="cancelProductBtn">Cancelar</button>
+        <button type="submit" class="btn-primary">Guardar producto</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal pedido -->
+<div class="modal-overlay" id="orderModal" style="display:none;">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2>Detalle del pedido</h2>
+      <button class="modal-close" id="orderModalClose">✕</button>
+    </div>
+    <div id="orderDetail" class="order-detail"></div>
+    <div class="modal-actions">
+      <label style="font-size:13px;font-weight:500;">Estado:</label>
+      <select id="orderStatusSelect" class="status-select">
+        <option>Pendiente</option><option>Confirmado</option>
+        <option>En camino</option><option>Entregado</option><option>Cancelado</option>
+      </select>
+      <button class="btn-primary" id="saveOrderStatus">Guardar estado</button>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

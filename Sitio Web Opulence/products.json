@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Fountain of Life",
+    "category": "Antioxidantes",
+    "price": 1200,
+    "description": "El antioxidante más poderoso del mercado. Combina ingredientes naturales de alta biodisponibilidad para combatir el envejecimiento celular y potenciar tu vitalidad desde adentro.",
+    "image": "assets/fountain-of-life.png",
+    "stock": 50,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Collagen Boost",
+    "category": "Colágeno",
+    "price": 980,
+    "description": "Fórmula premium de colágeno marino hidrolizado que mejora la elasticidad de la piel, fortalece articulaciones y promueve la recuperación muscular.",
+    "image": "",
+    "stock": 35,
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "Immunity Shield",
+    "category": "Inmunidad",
+    "price": 850,
+    "description": "Complejo inmunológico de alta potencia con vitaminas C, D3, Zinc y extracto de equinácea para fortalecer tus defensas naturales todo el año.",
+    "image": "",
+    "stock": 40,
+    "featured": false
+  },
+  {
+    "id": 4,
+    "name": "Energy Formula",
+    "category": "Energía",
+    "price": 750,
+    "description": "Mezcla de adaptógenos naturales, vitaminas del complejo B y minerales esenciales para mantener niveles óptimos de energía y concentración durante el día.",
+    "image": "",
+    "stock": 45,
+    "featured": false
+  }
+]
