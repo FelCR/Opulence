@@ -213,7 +213,7 @@ img{ max-width:100%; display:block; }
 .featured-product{
   position:relative;
   height:520px;
-  background:url("assets/fondo-fountain.jpg") center/cover no-repeat;
+  background:url("assets/Fountain\ of\ life.png") center/cover no-repeat;
 }
 .featured-product__overlay{
   position:absolute;
@@ -238,10 +238,7 @@ img{ max-width:100%; display:block; }
   font-family:"Playfair Display",serif;
   font-size:clamp(46px,5vw,64px);
 }
-.featured-product__image img{
-  width:240px;
-  filter:drop-shadow(0 12px 28px rgba(0,0,0,.4));
-}
+
 
 /* =====================================================
    SOLUCIONES
@@ -260,12 +257,12 @@ img{ max-width:100%; display:block; }
   gap:80px;
 }
 .solutions__photo{
-  height:280px;
+  height:320px;
   overflow:hidden;
 }
 .solutions__photo img{
   width:100%;
-  height:100%;
+  height:120%;
   object-fit:cover;
 }
 .solutions__product{
@@ -339,7 +336,7 @@ img{ max-width:100%; display:block; }
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:grayscale(1);
+  
 }
 .triptych__btn{
   display:inline-flex;
@@ -574,7 +571,7 @@ img{ max-width:100%; display:block; }
 .biz-hero{
   position:relative;
   height:420px;
-  background:url("assets/negocio-hero.jpg") center/cover no-repeat;
+  background:url("assets/negocio-hero.png") center/cover no-repeat;
   display:flex;
   align-items:center;
 }
@@ -969,4 +966,137 @@ img{ max-width:100%; display:block; }
     align-items: flex-start;
     gap: 8px;
   }
+}
+
+/* BOTÓN FLOTANTE */
+.whatsapp-button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 26px rgba(0,0,0,.6);
+  cursor: pointer;
+  z-index: 100;
+  transition: transform .25s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* VENTANA DE CHAT */
+.whatsapp-chat {
+  position: fixed;
+  right: 1.2rem;
+  bottom: 5.4rem;
+  width: min(360px, 92vw);
+  max-height: 420px;
+  background: #020505;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(12px) scale(.96);
+  pointer-events: none;
+  transition: .2s ease;
+  z-index: 99;
+}
+
+.whatsapp-chat.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* HEADER */
+.wa-chat-header {
+  background: linear-gradient(135deg, #075e54, #128c7e);
+  padding: .7rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: white;
+}
+
+.wa-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wa-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wa-chat-close {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* MENSAJES */
+.wa-chat-body {
+  flex: 1;
+  padding: .7rem;
+  overflow-y: auto;
+  background: url("assets/whatsapp_pattern.jpg");
+}
+
+.wa-message {
+  max-width: 80%;
+  font-size: .8rem;
+  padding: .45rem .6rem;
+  border-radius: 12px;
+  margin-bottom: .4rem;
+}
+
+.wa-message.agent {
+  background: #081b1b;
+  color: #e9f5f1;
+}
+
+.wa-message.user {
+  margin-left: auto;
+  background: #075e54;
+  color: white;
+}
+
+/* INPUT */
+.wa-chat-input {
+  display: flex;
+  gap: .4rem;
+  padding: .5rem;
+  background: #020608;
+}
+
+.wa-chat-input input {
+  flex: 1;
+  border-radius: 999px;
+  border: none;
+  padding: .4rem .7rem;
+  background: #050a0b;
+  color: white;
+}
+
+.wa-send-btn {
+  background: none;
+  border: none;
+  color: #25d366;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

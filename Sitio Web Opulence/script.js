@@ -86,4 +86,50 @@ updateCartBadge();
   });
 })();
 
+const whatsappBtn = document.getElementById("whatsappBtn");
+const whatsappChat = document.getElementById("whatsappChat");
+const waCloseBtn = document.getElementById("waCloseBtn");
+const waForm = document.getElementById("waForm");
+const waInput = document.getElementById("waInput");
+const waMessages = document.getElementById("waMessages");
+const waBadge = document.querySelector(".wa-badge");
+
+const WA_NUMBER_INTL = "523115776426";
+
+if (whatsappBtn && whatsappChat) {
+  // Abrir / cerrar chat
+  function toggleChat(force) {
+    const open = typeof force === "boolean"
+      ? force
+      : !whatsappChat.classList.contains("open");
+
+    whatsappChat.classList.toggle("open", open);
+
+    // Si se abrió, ocultamos el badge (mensaje "leído")
+    if (open && waBadge) waBadge.style.display = "none";
+  }
+
+  whatsappBtn.addEventListener("click", () => toggleChat());
+  waCloseBtn?.addEventListener("click", () => toggleChat(false));
+
+  // Enviar mensaje -> redirige a WhatsApp
+  waForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const text = (waInput?.value || "").trim();
+    if (!text) return;
+
+    // Mensaje usuario (para UX dentro del widget)
+    const userMsg = document.createElement("div");
+    userMsg.className = "wa-message user";
+    userMsg.textContent = text;
+    waMessages.appendChild(userMsg);
+
+    waInput.value = "";
+    waMessages.scrollTop = waMessages.scrollHeight;
+
+    // Redirigir a WhatsApp con el mensaje
+    const url = `https://wa.me/${WA_NUMBER_INTL}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+}
 
