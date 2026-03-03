@@ -23,7 +23,7 @@
     <nav class="nav" data-nav>
       <a href="index.html"    class="nav__link">Inicio</a>
       <a href="nosotros.html" class="nav__link">Nosotros</a>
-      <a href="tienda.html"   class="nav__link is-active">Tienda</a>
+      <a href="tienda.html"   class="nav__link is-active">Productos</a>
       <a href="negocio.html"  class="nav__link">Negocio</a>
       <a href="contacto.html" class="nav__link">Contacto</a>
     </nav>
@@ -83,7 +83,40 @@
       </div>
     </div>
   </section>
+<!-- VENTANA DE CHAT WHATSAPP -->
+<div class="whatsapp-chat" id="whatsappChat" aria-hidden="true">
+  <div class="wa-chat-header">
+    <div class="wa-avatar">
+      <img src="assets/profile sofi.png" alt="Asesor" />
+    </div>
+    <div class="wa-chat-info">
+      <div class="wa-chat-name">Sofía Opulence</div>
+      <div class="wa-chat-status">En línea</div>
+    </div>
+    <div class="wa-chat-close" id="waCloseBtn">&times;</div>
+  </div>
 
+  <div class="wa-chat-body" id="waMessages">
+    <div class="wa-message agent">
+      Hola 👋 ¿En qué podemos ayudarte hoy?
+    </div>
+  </div>
+
+  <form class="wa-chat-input" id="waForm">
+    <input
+      type="text"
+      id="waInput"
+      placeholder="Escribe tu mensaje..."
+      autocomplete="off"
+    />
+    <button type="submit" class="wa-send-btn">➤</button>
+  </form>
+</div>
+
+<!-- BOTÓN FLOTANTE -->
+<button class="whatsapp-button" id="whatsappBtn" aria-label="Abrir WhatsApp">
+  <img src="assets/whats.png" alt="WhatsApp" />
+</button>
 </main>
 
 <div class="checkout-modal" id="checkoutModal" aria-hidden="true">

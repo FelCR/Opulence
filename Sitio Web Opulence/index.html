@@ -32,7 +32,6 @@
         <a href="tienda.html" class="nav__link">Productos</a>
         <a href="negocio.html" class="nav__link">Negocio</a>
         <a href="contacto.html" class="nav__link">Contacto</a>
-        <a href="admin.html" class="nav__link">Iniciar sesión</a>
       </nav>
     </div>
   </header>
@@ -63,7 +62,7 @@
       <div class="hero__right">
         <img
           class="hero__image"
-          src="assets/hero.jpg"
+          src="assets/Mujer sonriendo.png"
           alt="Mujer sonriendo"
         />
       </div>
@@ -120,7 +119,7 @@
 
         <div class="featured-product__image">
           <img
-            src="assets/fountain-of-life.png"
+            src="assets/Botella FOL.png"
             alt="Fountain of Life"
           />
         </div>
@@ -153,13 +152,10 @@
           <!-- Columna derecha -->
           <div class="solutions__right">
             <div class="solutions__photo">
-              <img src="assets/solutions-model.jpg" alt="Bienestar Opulence" />
+              <img src="assets/solutions model.png" alt="Bienestar Opulence" />
             </div>
 
-            <div class="solutions__product">
-              <img class="solutions__product-bottle" src="assets/fountain-bottle.png" alt="Fountain of Life" />
-              <img class="solutions__product-leaves" src="assets/leaves.png" alt="" aria-hidden="true" />
-            </div>
+            
           </div>
 
         </div>
@@ -182,7 +178,7 @@
 
           <div class="why__right">
             <div class="why__frame">
-              <img src="assets/why-model.jpg" alt="Opulence MX" />
+              <img src="assets/why-model.png" alt="Opulence MX" />
             </div>
           </div>
 
@@ -197,7 +193,7 @@
 
           <article class="triptych__card">
             <div class="triptych__oval">
-              <img src="assets/trip-1.jpg" alt="Bienestar es inversión" />
+              <img src="assets/trip-1.png" alt="Bienestar es inversión" />
             </div>
 
             <h3 class="triptych__title">
@@ -213,7 +209,7 @@
 
           <article class="triptych__card">
             <div class="triptych__oval">
-              <img src="assets/trip-2.jpg" alt="Productos premium" />
+              <img src="assets/trip-2.png" alt="Productos premium" />
             </div>
 
             <h3 class="triptych__title">
@@ -229,7 +225,7 @@
 
           <article class="triptych__card">
             <div class="triptych__oval">
-              <img src="assets/trip-3.jpg" alt="Visión de crecimiento" />
+              <img src="assets/trip-3.png" alt="Visión de crecimiento" />
             </div>
 
             <h3 class="triptych__title">
@@ -278,11 +274,46 @@
 
         <!-- Right -->
         <div class="contact__right">
-          <img src="assets/contact-photo.jpg" alt="Equipo Opulence" />
+          <img src="assets/contact-photo.png" alt="Equipo Opulence" />
         </div>
 
       </div>
     </section>
+    <!-- VENTANA DE CHAT WHATSAPP -->
+<div class="whatsapp-chat" id="whatsappChat" aria-hidden="true">
+  <div class="wa-chat-header">
+    <div class="wa-avatar">
+      <img src="assets/profile sofi.png" alt="Asesor" />
+    </div>
+    <div class="wa-chat-info">
+      <div class="wa-chat-name">Sofía Opulence</div>
+      <div class="wa-chat-status">En línea</div>
+    </div>
+    <div class="wa-chat-close" id="waCloseBtn">&times;</div>
+  </div>
+
+  <div class="wa-chat-body" id="waMessages">
+    <div class="wa-message agent">
+      Hola 👋 ¿En qué podemos ayudarte hoy?
+    </div>
+  </div>
+
+  <form class="wa-chat-input" id="waForm">
+    <input
+      type="text"
+      id="waInput"
+      placeholder="Escribe tu mensaje..."
+      autocomplete="off"
+    />
+    <button type="submit" class="wa-send-btn">➤</button>
+  </form>
+</div>
+
+<!-- BOTÓN FLOTANTE -->
+<button class="whatsapp-button" id="whatsappBtn" aria-label="Abrir WhatsApp">
+  <img src="assets/whats.png" alt="WhatsApp" />
+</button>
+
   </main>
 
   <script src="script.js"></script>

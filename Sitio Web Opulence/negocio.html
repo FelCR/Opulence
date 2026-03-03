@@ -93,7 +93,8 @@
             <div class="biz-card">
               <div class="biz-card__img">
                 <!-- Placeholder imagen 1 -->
-                <div class="img-slot">Imagen 1</div>
+                <image class="img-slot"src="assets/card img 1.png"
+          alt="Imagen 1"/>
               </div>
               <div class="biz-card__body">
                 <h3>Construye con propósito</h3>
@@ -104,7 +105,8 @@
             <div class="biz-card biz-card--secondary">
               <div class="biz-card__img">
                 <!-- Placeholder imagen 2 -->
-                <div class="img-slot">Imagen 2</div>
+                <image class="img-slot"src="assets/card img 2.png"
+          alt="Imagen 2"/>
               </div>
               <div class="biz-card__body">
                 <h3>Crece a tu ritmo</h3>
@@ -159,6 +161,40 @@
         </form>
       </div>
     </section>
+    <!-- VENTANA DE CHAT WHATSAPP -->
+<div class="whatsapp-chat" id="whatsappChat" aria-hidden="true">
+  <div class="wa-chat-header">
+    <div class="wa-avatar">
+      <img src="assets/profile sofi.png" alt="Asesor" />
+    </div>
+    <div class="wa-chat-info">
+      <div class="wa-chat-name">Sofía Opulence</div>
+      <div class="wa-chat-status">En línea</div>
+    </div>
+    <div class="wa-chat-close" id="waCloseBtn">&times;</div>
+  </div>
+
+  <div class="wa-chat-body" id="waMessages">
+    <div class="wa-message agent">
+      Hola 👋 ¿En qué podemos ayudarte hoy?
+    </div>
+  </div>
+
+  <form class="wa-chat-input" id="waForm">
+    <input
+      type="text"
+      id="waInput"
+      placeholder="Escribe tu mensaje..."
+      autocomplete="off"
+    />
+    <button type="submit" class="wa-send-btn">➤</button>
+  </form>
+</div>
+
+<!-- BOTÓN FLOTANTE -->
+<button class="whatsapp-button" id="whatsappBtn" aria-label="Abrir WhatsApp">
+  <img src="assets/whats.png" alt="WhatsApp" />
+</button>
   </main>
 
   <script src="script.js"></script>
